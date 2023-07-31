@@ -1,0 +1,50 @@
+@import "../../../assets/css/style.styl"
+
+.sidebar
+    border-left: 1px solid $orange-200
+    padding: 0 1.25rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &__header
+        margin-bottom: 1.25rem
+        h2
+            color: $orange-300
+            margin-bottom: 0.625rem
+        p
+            opacity: 0.6
+            font-size: 0.875rem
+    &__body
+        display: flex
+        flex-direction: column
+        .sidebar__summary-item
+            padding: 1.25rem 0
+            border-top: 1px solid $gray-200
+            label
+                font-size: 0.875rem
+            h4
+                color: $green-200
+                font-size: 1rem
+                margin-top: .25rem
+                font-weight: 500
+    &__item
+        label
+            color: $gray-200
+        display: flex
+        justify-content: space-between
+        font-size: 0.875rem
+        &--large
+                font-size: 1.5rem
+                color: $orange-300
+                font-weight: bold
+                margin-top: 1.5rem !important
+                label
+                    color: $orange-300
+        span
+            font-weight: bold
+            
+    &__footer
+        .sidebar__item + .sidebar__item
+            margin-top: .75rem
+        .button
+            margin-top: 1.875rem

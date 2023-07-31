@@ -1,0 +1,32 @@
+@import "../../assets/css/style.styl"
+
+.stepper 
+    display: flex
+    justify-content: center
+    margin-bottom: -2.5rem
+    &__wrapper 
+        background: $orange-100
+        border-radius: 2.1875rem
+        padding: 1.25rem 2.375rem
+        display: flex
+    &__item 
+        display: flex
+        align-items center
+        color: $orange-300
+        font-weight: 500
+        &--active .stepper__number
+            background: $orange-300
+            color: $white
+    &__number
+        width: 30px
+        aspect-ratio: 1
+        border-radius: 50%
+        color: $orange-300
+        background: $orange-200
+        display: flex
+        align-items center
+        justify-content center
+        font-size: 1rem
+        margin-right: 0.625rem
+    &__arrow
+        margin: 0 1.25rem;

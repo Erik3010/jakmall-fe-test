@@ -1,0 +1,101 @@
+@import "../../assets/css/style.styl"
+
+.section
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .checkbox
+            display: flex
+            align-items: center
+            &__label
+                font-size: 0.875rem
+                color: $black
+                opacity: 0.8
+                font-weight: 500
+                margin-left: 0.625rem
+                cursor: pointer
+                user-select: none
+            &__checkmark
+                position: relative
+                border: 2px solid $green-200
+                color: $green-200
+                width: 1.25rem
+                aspect-ratio: 1
+                background: #fff
+            &__wrapper
+                display: flex
+                align-items: center
+                input[type="checkbox"]
+                    display: none
+                    &:checked + .checkbox__checkmark:before
+                        content: "✓"
+                        font-size: 1.25rem
+                        position: absolute
+                        top: -4px
+                        left: -1px
+    &__content
+        margin-top: 2.25rem
+        form
+            display: grid
+            grid-template-columns: 1.25fr 1fr
+            column-gap: 1.875rem
+            row-gap: 0.625rem
+        .form__control
+            position: relative
+            .form__counter
+                position: absolute
+                font-size: .75rem
+                bottom: 1rem
+                right: .75rem
+            &:before
+                position: absolute
+                right: 1rem
+                top: 1rem
+                font-size: 1.125rem
+                color: $form-color
+            input, textarea
+                width: 100%
+                font-size: 1rem
+                padding: 1.5rem 3rem 0.5rem 1rem
+                border: 1px solid $gray-200
+                color: $black
+                font-weight: bold
+                transition: background .2s ease
+                &:focus + label,
+                &:not(:placeholder-shown) + label
+                    font-size: .75rem
+                    top: 0.5rem
+                &:disabled
+                    background: $gray-100
+                    cursor: not-allowed
+            textarea
+                height: 7.5rem
+                resize: none
+            label
+                position: absolute
+                left: 1rem
+                top: 1.05rem
+                pointer-events: none
+                font-size: 1rem
+                font-weight: 500
+                color: $gray-200
+                transition: .2s all
+            &--success
+                &:before
+                    content: '✓'
+                    color: $green-200
+                input,
+                textarea
+                    border-color: $green-200
+                label
+                    color: $green-200
+            &--failed
+                &:before
+                    content: '✗'
+                    color: $orange-300
+                input,
+                textarea
+                    border-color: $orange-300
+                label
+                    color: $orange-300

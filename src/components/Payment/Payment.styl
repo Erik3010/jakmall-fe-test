@@ -1,0 +1,51 @@
+@import "../../assets/css/style.styl"
+
+.section
+    &__item + &__item
+        margin-top: 3.75rem
+    .title
+        margin-bottom: 1.875rem
+    &__content
+        .card
+            span
+                display: block
+                font-size: 0.8125rem
+                margin-bottom: .125rem
+                font-weight: 500
+            &--selected
+                background: $green-100
+                border-color: $green-200
+                color: #000
+                opacity: 0.8
+                &:before
+                    content: "✓"
+            &--empty-balance
+                span
+                    font-size: 1rem
+                    margin-bottom: 0
+            background: $white
+            color: $black
+            opacity: 0.6
+            position: relative
+            border: 2px solid $gray-200 
+            padding: .75rem 1rem
+            cursor: pointer
+            transition: .2s ease
+            display: flex
+            flex-direction: column
+            justify-content center
+            &:before
+                position: absolute
+                right: 1rem
+                top: 1rem
+                color: $green-200
+                font-size: 1.4rem
+            &__wrapper
+                display: grid
+                grid-template-columns: repeat(3, 1fr)
+                gap: 0.625rem
+            input[type="radio"]
+                display: none
+            h4
+                font-size: 1rem
+                font-weight: bold
