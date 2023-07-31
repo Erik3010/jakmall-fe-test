@@ -1,7 +1,12 @@
-# Vue 3 + Vite
+# Jakmall Technical Test
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a technical test for Jakmall. This project is built using Vue 3 (Composition API) and Stylus for styling. All data in the form is stored in the browser storage (Local storage).
 
-## Recommended IDE Setup
+## Project setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```
+npm install
+
+// to run the project in development mode
+npm run dev
+```
